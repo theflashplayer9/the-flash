@@ -1,0 +1,79 @@
+import time  #import time
+from random import randint #importing random from random integer
+file=open("z:/Desktop/keywords.txt")#file
+lines= list(file)#turns file into list
+q=1 #viarible
+question_1 = randint(0, 29)#random interge
+choiceorder= randint(1, 3)#random interge
+    
+print ("hello give me a minute while I get the flashcards out ...")#loading sysyem
+time.sleep(1)#loading sysyem
+print("")#loading sysyem
+print ("")#loading sysyem
+time.sleep(1)#loading sysyem
+
+
+time.sleep(1)#loading sysyem
+print()#loading sysyem
+print()#loading sysyem
+print("Flash Cards randomizing")#loading sysyem
+time.sleep(3)#loading sysyem
+print ("")#loading sysyem
+print ("")#loading sysyem
+
+
+
+
+score=0#score
+
+
+
+
+
+while q<12:
+    answer1 = randint(0, 29)#random interge
+    answer2 = randint(0, 29)#random interge
+    choiceorder = randint(1,3)#random interge
+    print ("Question ", + q)
+    time.sleep(1)
+    while question_1%2!=0:
+        question_1 = randint(0, 29)#random interge
+    while answer1%2==0:
+        answer1 = randint(0,29)#random interge
+    while answer2%2--0:
+        answer2 = randint(0, 29)#random interge
+    print (lines[question_1])
+    if choiceorder == 1:
+        print (lines[question_1-1])
+        print (lines[answer1])
+        print (lines[answer2])
+    elif choiceorder == 2:
+        print (lines[answer1])
+        print (lines[question_1-1])
+        print (lines[answer2])
+    elif choiceorder == 3:
+        print (lines[answer1])
+        
+        print  (lines[answer2])
+        print (lines[question_1-1])
+    print()        
+    print("please choose an answer")#asking for an awnswer
+
+   # time.sleep(1)
+    input_1 = (int(input("Please Enter the number here: ")))#to input the awnswer 
+    q=q+1
+    if input_1==choiceorder:#if input_1 is correct
+        score+1
+        print("Yes you are correct")#praising for correct anwser
+        time.sleep(2)
+        score= score +1
+    else:#if input_1 isnt correct
+        print ("unfortunately you are incorrect, Better luck next time")#question wrong 
+        time.sleep(3)
+    time.sleep(2)
+    print()
+    question_1=randint(0,29)#random interge
+    answer1 = randint(0,29)#random interge
+    answer2= randint(0, 29)#random interge
+
+print (score) #score 
